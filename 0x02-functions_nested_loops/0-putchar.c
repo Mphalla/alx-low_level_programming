@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_putchar - Printing _putchar without using
- * printf, puts
- * Return: nothing
+ * main - function to print
+ *
+ * Return: 0
  */
-void print_putchar(void)
+int main(void)
 {
 	_putchar('_');
 	_putchar('p');
@@ -16,4 +16,5 @@ void print_putchar(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
+	return (0);
 }
