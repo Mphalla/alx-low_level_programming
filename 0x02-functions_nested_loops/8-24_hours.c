@@ -1,39 +1,25 @@
 #include "main.h"
 
 /**
- * jack_bauer - print 24 hours
+ * jack_bauer - print every minute of the day
+ *
+ * Return: Always 0
  */
 void jack_bauer(void)
 {
-	int i, j;
+	int i;
+	int j;
 
-	for (i = 0; i < 24; i++)
+	for (i = 0; i <= 23; i++)
 	{
-		for (j = 0; j < 60; j++)
-		{
-			if (i < 10)
-			{
-				_putchar('0');
-				_putchar(i + '0');
-			}
-			else if (i >= 10)
-			{
-				_putchar((i / 10) + '0');
-				_putchar((i % 1) + '0');
-			}
-			if (j < 10)
-			{
-				_putchar(':');
-				_putchar('0');
-				_putchar(j + '0');
-			}
-			else if (j >= 10)
-			{
-			_putchar(':');
-			_putchar((j / 10) + '0');
-			_putchar((j % 10) + '0');
-			}
+	for (j = 0; j <= 59; j++)
+	{
+		_putchar(i / 10 + '0');
+		_putchar(i % 10 + '0');
+		_putchar(':');
+		_putchar(j / 10 + '0');
+		_putchar(j % 10 + '0');
 		_putchar('\n');
-		}
+	}
 	}
 }
