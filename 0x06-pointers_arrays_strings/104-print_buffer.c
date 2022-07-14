@@ -21,7 +21,7 @@ void printHexes(char *b, int start, int end)
 {
 	int i = 0;
 
-	while (i < 0)
+	while (i < 10)
 	{
 		if (i < end)
 			printf("%02x", *(b + start + i));
@@ -29,6 +29,7 @@ void printHexes(char *b, int start, int end)
 			printf(" ");
 		if (i % 2)
 			printf(" ");
+		i++;
 	}
 }
 
