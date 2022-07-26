@@ -28,11 +28,11 @@ int check_num(char *str)
  * main - add positive numbers
  * @argc: argument count
  * @argv: array of pointers to argument strings
- * Return: result of addition or 1
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	int i, count;
+	int i, count, sum;
 
 	sum = 0;
 	count = 1;
