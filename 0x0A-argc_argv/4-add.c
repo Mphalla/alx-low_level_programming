@@ -32,18 +32,23 @@ int check_num(char *str)
  */
 int main(int argc, char *argv[])
 {
-	int i, num, sum;
+	int i, count;
 
 	sum = 0;
-	for (i = 1; i < argc; i++)
+	count = 1;
+	while (count < argc)
 	{
-		num = check_num(argv[i]);
-		if (num == -1)
+		if (check_num(argv[count]))
+		{
+			i = atoi(argv[count]);
+			sum += i;
+		}
+		else
 		{
 			printf("Error\n");
 			return (1);
 		}
-		sum += num;
+		count++;
 	}
 	printf("%d\n", sum);
 	return (0);
